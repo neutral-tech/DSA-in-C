@@ -14,11 +14,19 @@ typedef struct linkedlist node;
 void create(node*);//Function to create a linkedlist
 void print(node*);//Function to print the linkedlist
 int count(node*);//Function to count the number of nodes in linkedlist
+node* insertFirst(node*,int);//Function to insert a node in the beginning of linkedlist
 
 int main(){
     node *head=(node*)malloc(sizeof(node));
     create(head);
     printf("\n");
+    print(head);
+    printf("\nNumber of nodes: %d\n",count(head));
+    printf("\nEnter the value to insert at the beginning: ");
+    int a;
+    scanf("%d",&a);
+    head=insertFirst(head,a);
+    printf("\nAfter insertion:\n");
     print(head);
     printf("\nNumber of nodes: %d\n",count(head));
 
@@ -54,4 +62,12 @@ int count(node *temp){
         temp=temp->next;
     }
     return count;
+}
+
+node* insertFirst(node *temp,int value){
+     node *sth=(node*)malloc(sizeof(node));
+     sth->data=value;
+     sth->next=temp;
+     temp=sth;
+     return temp;
 }
