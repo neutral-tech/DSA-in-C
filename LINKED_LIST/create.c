@@ -95,7 +95,7 @@ void sum(node *temp){            //temp is a pointer to the first node just like
 }
 
 void operate(node **temp){      //temp is a pointer to the pointer head. It stores the address of the pointer which points to the first node.
-    printf("\nOperations on linkedlist:\n\n1.Creation of Linked List\n2.Print the Linked List\n3.Count the number of nodes\n4.Insertion at the start\n5.Insertion at the last\n");
+    printf("\nOperations on linkedlist:\n\n1.Creation of new Linked List from current first node\n2.Print the Linked List\n3.Count the number of nodes\n4.Insertion at the start\n5.Insertion at the last\n");
     printf("6.Sum of all the nodes\n7.End the program\n\nInput: ");
     int input;
     scanf("%d",&input);
