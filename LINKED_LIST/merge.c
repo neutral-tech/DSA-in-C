@@ -9,7 +9,7 @@ struct ListNode{
 void create(struct ListNode**);    //Function to create a linkedlist
 void print(struct ListNode*);      //Function to print the linkedlist
 struct ListNode* merge(struct ListNode*,struct ListNode*);   //Function to merge two sorted linkedlist
-
+struct ListNode* swap(struct ListNode*);    //Function to swap the node pairs
 int main(){
    printf("The Input LinkedList must be sorted in non-decreasing order.\n");
    struct ListNode* head1=(struct ListNode*)malloc(sizeof(struct ListNode));
@@ -24,7 +24,8 @@ int main(){
    print(head2);
    struct ListNode* list=merge(head1,head2);
    print(list);
-
+   struct ListNode* new=swap(list);
+   print(new);
    return 0;
 }
 
@@ -101,4 +102,16 @@ struct ListNode* merge(struct ListNode* list1,struct ListNode* list2){
         list->next=NULL;
     }
     return ll;
+}
+
+struct ListNode* swap(struct ListNode* head){
+    struct ListNode* list=head;
+    int temp;
+    while(head!=NULL&&head->next!=NULL){
+        temp=head->val;
+        head->val=head->next->val;
+        head->next->val=temp;
+        head=head->next->next;
+    }
+    return list;
 }
