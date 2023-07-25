@@ -1,3 +1,6 @@
+//Write a program to reverse group of 'k' nodes in a given linkedlist.
+//Example: [1,2,3,4,5] and k=3
+//Output: [3,2,1,4,5]
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -29,5 +32,10 @@ struct ListNode* swapgroup(struct ListNode* head,int k){
         }
     }
     return list;
+}
+
+int main(){
+
+    return 0;
 }
 
