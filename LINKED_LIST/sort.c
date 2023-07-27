@@ -14,6 +14,7 @@ int main(){
 }
 
 //NOTE: This function sort the nodes of the linkedlist, not the value of the nodes of a linkedlist.
+//BUBBLE SORT OF LINKEDLIST
 struct ListNode* sortList(struct ListNode* head){
     struct ListNode *ptr1=head,*ptr2=head->next,*previous;
     int i,j,count=0;
